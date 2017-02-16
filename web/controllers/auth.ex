@@ -11,6 +11,7 @@ defmodule Rumbl.Auth do
 
   def call(conn, repo) do
     user_id = get_session(conn, :user_id)
+
     cond do
       user = conn.assigns[:current_user] ->
         conn
