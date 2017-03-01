@@ -14,9 +14,6 @@ defmodule Rumbl.Video do
     timestamps()
   end
 
-  @doc"""
-    Customize the Phoenix.Param protocol
-  """
   defimpl Phoenix.Param, for: Rumbl.Video do
     def to_param(%{slug: slug, id: id}) do
       "#{id}-#{slug}"

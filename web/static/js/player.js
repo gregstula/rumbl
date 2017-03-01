@@ -1,6 +1,6 @@
-watching_videos/listings/rumbl/web/static/js/player.js
 let Player = {
-player: null,
+
+	player: null,
 
 	init(domId, playerId, onReady){
 		window.onYouTubeIframeAPIReady = () => {
@@ -27,5 +27,6 @@ player: null,
 	getCurrentTime(){ return Math.floor(this.player.getCurrentTime() * 1000) },
 	seekTo(millsec){ return this.player.seekTo(millsec / 1000) }
 }
+
 export default Player
 
